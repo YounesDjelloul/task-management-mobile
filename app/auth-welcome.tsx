@@ -46,7 +46,7 @@ export default function AuthWelcome() {
                             <Text className="font-button text-lg text-white text-center font-semibold">Sign In</Text>
                         </View>
                     </Link>
-                    <Link href='./login' className="w-full">
+                    <Link href='./registration' className="w-full">
                         <View className="bg-white py-3 px-6 w-full rounded-full">
                             <Text className="font-button text-lg text-black text-center font-semibold">Sign Up</Text>
                         </View>
