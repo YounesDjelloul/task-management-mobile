@@ -5,10 +5,12 @@ interface InputFieldProps {
     placeholder?: string | undefined,
     value?: string | undefined,
     label?: string,
-    onChangeText?: ((text: string) => void) | undefined
+    onChangeText?: ((text: string) => void) | undefined,
+    error?: string,
+    secureTextEntry?: boolean | undefined
 }
 
-export default function InputField({placeholder, value, label, onChangeText}: InputFieldProps) {
+export default function InputField({placeholder, value, label, onChangeText, error, secureTextEntry}: InputFieldProps) {
     const [isFocused, setIsFocused] = useState(false);
 
     return (
@@ -24,7 +26,11 @@ export default function InputField({placeholder, value, label, onChangeText}: In
                 onChangeText={onChangeText}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
+                secureTextEntry={secureTextEntry}
             />
+            {error && (
+                <Text className="text-red-500 text-sm mt-1 font-medium">{error}</Text>
+            )}
         </View>
     )
 }
