@@ -5,6 +5,7 @@ import React from "react";
 import {z} from "zod";
 import {Controller, useForm} from "react-hook-form";
 import {zodResolver} from '@hookform/resolvers/zod';
+import {Link} from "expo-router";
 
 interface State {
     email: string;
@@ -83,7 +84,9 @@ export default function Login() {
                 <View className='w-[95%] flex justify-center items-center mt-8'>
                     <Text className='font-body text-md font-normal text-gray-600'>
                         Don't have an account?
-                        <Text className='font-bold'> Sign Up</Text>
+                        <Link href='./registration'>
+                            <Text className='font-bold'> Sign Up</Text>
+                        </Link>
                     </Text>
                 </View>
             </View>
