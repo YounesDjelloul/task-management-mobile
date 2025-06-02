@@ -1,7 +1,7 @@
 import SafeContainer from "@/components/SafeContainer";
 import {View, Text, Pressable} from "react-native";
 import InputField from "@/components/base/InputField";
-import React, {useState} from "react";
+import React from "react";
 import {z} from "zod";
 import {Controller, useForm} from "react-hook-form";
 import {zodResolver} from '@hookform/resolvers/zod';
